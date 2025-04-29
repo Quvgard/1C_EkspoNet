@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="47">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<UsualGroup name="Группа3" id="51">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Ответственный" id="7">
+							<DataPath>Объект.Ответственный</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="49">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="53">
+							<DataPath>Объект.Причина</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Экспонаты" id="56">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Экспонаты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЭкспонатыКонтекстноеМеню" id="57"/>
+			<AutoCommandBar name="ЭкспонатыКоманднаяПанель" id="58"/>
+			<ExtendedTooltip name="ЭкспонатыРасширеннаяПодсказка" id="59"/>
+			<SearchStringAddition name="ЭкспонатыСтрокаПоиска" id="60">
+				<AdditionSource>
+					<Item>Экспонаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЭкспонатыСтрокаПоискаКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="ЭкспонатыСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЭкспонатыСостояниеПросмотра" id="63">
+				<AdditionSource>
+					<Item>Экспонаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЭкспонатыСостояниеПросмотраКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="ЭкспонатыСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЭкспонатыУправлениеПоиском" id="66">
+				<AdditionSource>
+					<Item>Экспонаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЭкспонатыУправлениеПоискомКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="ЭкспонатыУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЭкспонатыНомерСтроки" id="69">
+					<DataPath>Объект.Экспонаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЭкспонатыНомерСтрокиКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ЭкспонатыНомерСтрокиРасширеннаяПодсказка" id="71"/>
+				</LabelField>
+				<InputField name="ЭкспонатыЭкспонат" id="72">
+					<DataPath>Объект.Экспонаты.Экспонат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЭкспонатыЭкспонатКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ЭкспонатыЭкспонатРасширеннаяПодсказка" id="74"/>
+					<Events>
+						<Event name="OnChange">ЭкспонатыЭкспонатПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЭкспонатыЯчейкаИсходная" id="75">
+					<DataPath>Объект.Экспонаты.ЯчейкаИсходная</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЭкспонатыЯчейкаИсходнаяКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ЭкспонатыЯчейкаИсходнаяРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="ЭкспонатыЯчейкаПриемник" id="78">
+					<DataPath>Объект.Экспонаты.ЯчейкаПриемник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЭкспонатыЯчейкаПриемникКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ЭкспонатыЯчейкаПриемникРасширеннаяПодсказка" id="80"/>
+					<Events>
+						<Event name="OnChange">ЭкспонатыЯчейкаПриемникПриИзменении</Event>
+						<Event name="StartChoice">ЭкспонатыЯчейкаПриемникНачалоВыбора</Event>
+						<Event name="StartListChoice">ЭкспонатыЯчейкаПриемникНачалоВыбораИзСписка</Event>
+						<Event name="ChoiceProcessing">ЭкспонатыЯчейкаПриемникОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Перемещение</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
